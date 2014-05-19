@@ -1,0 +1,16 @@
+Copyright 2014 陈睿超<linuxer.sheep.0x@gmail.com>
+本作品采用知识共享 署名-相同方式共享 4.0 国际 许可协议进行许可。访问 http://creativecommons.org/licenses/by-sa/4.0/deed.zh 查看该许可协议。
+
+因为题目太娱乐了所以题解就略了。以下翻译一下题目
+
+==================== 题意 ====================
+题目背景略。
+有N间房间，类型为bedroom, bathroom, kitchen, balcony, others中的一种。已知所有房间的面积和类型，求：
+    - 总面积
+    - 卧室总面积
+    - 总价
+总价 = reduced的总面积 × 每平米的单价
+reduced的总面积 = 所有房间的面积之和，其中balcony的面积折半计算
+
+==================== 杂项 ====================
+不会爆int32

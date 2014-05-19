@@ -1,0 +1,13 @@
+POJ1002.c
+12435672    lrg213      1002    Accepted    752K    375MS   GCC     1637B       2014-01-14 02:16:38
+12436207    lrg213      1002    Accepted    752K    360MS   GCC     1632B       2014-01-14 12:03:13
+
+POJ1002_scanf.c
+12436193    lrg213      1002    Accepted    752K    1610MS  GCC     1592B       2014-01-14 12:00:13
+
+POJ1002_scanf_2.c
+12436197    lrg213      1002    Time Limit Exceeded         GCC     1594B       2014-01-14 12:01:05
+12436204    lrg213      1002    Time Limit Exceeded         GCC     1594B       2014-01-14 12:02:28
+
+POJ1002_C99.c
+12436230    lrg213      1002    Accepted    724K    344MS   GCC     1646B       2014-01-14 12:10:03

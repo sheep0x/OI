@@ -1,0 +1,10 @@
+Copyright 2014 陈睿超<linuxer.sheep.0x@gmail.com>
+本作品采用知识共享 署名-相同方式共享 4.0 国际 许可协议进行许可。访问 http://creativecommons.org/licenses/by-sa/4.0/deed.zh 查看该许可协议。
+
+水题
+正难则反，ans = M^N - 不发生越狱的方案数
+N=1时，有M种方案。
+N>1时，第N个房间的囚犯信的教不能跟第N-1个房间的囚犯信的教相同，故方案数 = 房间数为N-1时的方案数 * (M-1)
+故 ans = M^N - M*(M-1)^(N-1)
+
+要注意的是，100003^2超过了INT32_MAX，需要使用int64

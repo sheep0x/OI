@@ -1,0 +1,8 @@
+POJ2318_crossprod.c
+12422380    lrg213      2318    Accepted    416K    282MS   GCC     1509B       2014-01-06 21:05:59
+(多次提交的运行时间均为282ms或297ms。应是误差)
+
+POJ2318_crossprod_bisection.c
+12422384    lrg213      2318    Accepted    416K    157MS   GCC     1618B       2014-01-06 21:06:48
+
+观察了一下别人的提交，G++和VC++的速度差好多，内存开销也大得多...TAT

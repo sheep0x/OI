@@ -1,0 +1,11 @@
+BZOJ1968.c
+530021      msp     1968    Accepted    752kb       32ms    C       857B        2014-01-16 13:44:13
+
+BZOJ1968.sh
+N = 100000
+real    0m1.664s
+user    0m1.556s
+sys     0m0.076s
+
+BZOJ1968_block.sh
+533906      msp     1968    Accepted    2852kb      412ms   Bash    828B        2014-01-21 22:23:28
