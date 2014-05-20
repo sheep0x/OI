@@ -21,20 +21,13 @@
 
 #define maxN 1000000
 typedef long long i64;
-typedef int Array[maxN+1];
 typedef i64 LArray[maxN+1];
 
 int N;
 i64 a, b, c;
 LArray S, F, Y; // S - prefix sum, F - DP array (see ./note)
 i64 *X = S;
-int Q[maxN+1], Qhead, Qtail;    // monotone chain
-
-void gen_point(int n)
-{
-    i64 s = S[n];
-    Y[n] = F[n] + a*s*s - b*s;
-}
+int Q[maxN+1], h, t;    // monotone chain (h - Qhead, t - Qtail)
 
 // (Pj-Pi) * (Pk-Pi)
 i64 cross(int i, int j, int k)
@@ -47,34 +40,27 @@ i64 cross(int i, int j, int k)
 int main(void)
 {
     scanf("%d%lld%lld%lld", &N, &a, &b, &c);
-    S[0] = F[0] = 0;
+    S[0] = F[0] = Y[0] = 0;
     for(int i=1, x; i<=N; i++) {
         scanf("%d", &x);
         S[i] = S[i-1] + x;
     }
 
-    gen_point(0);
-    Qhead = Qtail = 0;
-    Q[Qtail++] = 0;
+    h = t = 0;
+    Q[t++] = 0;
 
     for(int i=1; i<=N; i++) {
-#       define h Qhead
-#       define t Qtail
-
         i64 s = S[i], k = 2*a*s;
         while(t-h > 1 && Y[Q[h+1]] - Y[Q[h]] > k * (X[Q[h+1]] - X[Q[h]]))
             h++;
 
         int j = Q[h];
         F[i] = Y[j] - k * S[j] + (a*s*s + b*s + c);
+        Y[i] = F[i] + a*s*s - b*s;
 
-        gen_point(i);
         while(t-h > 1 && cross(Q[t-2], Q[t-1], i) > 0)
             t--;
         Q[t++] = i;
-
-#       undef h
-#       undef t
     }
 
     printf("%lld\n", F[N]);
